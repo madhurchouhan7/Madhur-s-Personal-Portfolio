@@ -20,7 +20,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  basePath: '/Madhur-s-Personal-Portfolio',
 };
 
-export default nextConfig;
-module.exports = nextConfig;
+// export default nextConfig;
+// module.exports = nextConfig;
