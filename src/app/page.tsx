@@ -10,6 +10,7 @@ import Publications from '@/components/Publications';
 import Experience from '@/components/Experience';
 import TechStack from '@/components/TechStack';
 import Achievements from '@/components/Achievements';
+import Certificates from '@/components/Certificates';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CursorGlow from '@/components/CursorGlow';
@@ -41,6 +42,7 @@ export default function Home() {
           <Experience />
           <TechStack />
           <Achievements />
+          <Certificates />
           <Contact />
         </main>
         <Footer />

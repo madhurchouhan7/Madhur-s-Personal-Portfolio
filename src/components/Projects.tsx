@@ -64,6 +64,34 @@ const projects: Project[] = [
     codeLink: 'https://github.com/madhurchouhan7',
     image: '/images/ai-medical-assistant.jpg',
   },
+  {
+    id: 'wattwise',
+    title: 'WattWise - Smart Energy Management',
+    subtitle: 'Mar 2026 – May 2026',
+    description:
+      'Building a comprehensive, non-intrusive energy monitoring and management system. WattWise empowers users to track daily appliance usage, visualize power consumption, and generate optimized AI energy plans.',
+    longDescription:
+      'Currently architecting the system from the ground up, focusing heavily on robust CI/CD pipelines and scalable infrastructure before scaling the user base.\n\nKey Technical Milestones:\n\nFrontend: Developing a cross-platform mobile application using Flutter, featuring dynamic energy dashboards and appliance management UIs.\n\nBackend: Engineering a RESTful API with Node.js, Express, and MongoDB to handle real-time user data and secure authentication.\n\nDevOps & Architecture: Implemented an enterprise-grade CI/CD pipeline using GitHub Actions to automate linting, security audits, and testing (flutter analyze, npm test). Engineered a fully automated Continuous Deployment (CD) pipeline that safely injects environment secrets and publishes release-ready APKs.\n\nContainerized the backend using highly optimized, multi-stage Docker builds with strict security layers (non-root users, .dockerignore) for seamless deployment across environments.',
+    tags: ['Flutter', 'Node.js', 'Express', 'MongoDB', 'GitHub Actions', 'Docker'],
+    category: 'Full Stack',
+    link: 'https://wattwise-landing-page.vercel.app/',
+    codeLink: 'https://github.com/madhurchouhan7/WattWise-App-MONO-REPO',
+    image: '/images/wattwise.png',
+  },
+  {
+    id: 'vaccicare',
+    title: 'VacciCare',
+    subtitle: 'Child Vaccination Manager',
+    description:
+      'A Flutter mobile app for managing child vaccination schedules, reminders, and nearby health centres. Features multi-child profiles and smart scheduling.',
+    longDescription:
+      'VacciCare is a comprehensive Flutter mobile application dedicated to managing child vaccination schedules, reminders, and locating nearby health centres.\n\nIt provides a clean onboarding flow, enabling parents to set up multi-child profiles with smart scheduling algorithms that track necessary vaccinations based on age milestones.\n\nThe application is crafted with a modern, polished UI adhering to Material 3 design guidelines, ensuring an intuitive and accessible user experience for parents and caregivers.',
+    tags: ['Flutter', 'Dart', 'Material 3', 'Mobile Dev'],
+    category: 'Mobile App',
+    link: 'https://vacci-care-landing-page.vercel.app/',
+    codeLink: 'https://github.com/madhurchouhan7/vacci_care',
+    image: '/images/vacci-care.png',
+  },
 ];
 
 const cardVariants = {
@@ -83,6 +111,8 @@ const categoryColor: Record<string, string> = {
   Research: '#60a5fa',
   'Computer Vision': '#4ade80',
   GenAI: '#c084fc',
+  'Full Stack': '#f59e0b',
+  'Mobile App': '#ec4899',
 };
 
 /* ─── MODAL ─────────────────────────────────────────────────────────────── */
