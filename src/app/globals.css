@@ -1,64 +1,241 @@
+/* ============================================================
+   FONT IMPORTS
+   ============================================================ */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   CSS CUSTOM PROPERTIES — Premium Dark Palette
+   ============================================================ */
 @layer base {
   :root {
-    --background: 224 4% 17%; /* #2B2D31 */
-    --foreground: 210 40% 98%;
-    --card: 222 5% 20%;
-    --card-foreground: 210 40% 98%;
-    --popover: 224 4% 17%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 266 50% 53%; /* #7949C6 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 25%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 261 100% 67%; /* #A259FF */
-    --accent-foreground: 210 40% 98%;
+    --background: 0 0% 4%;         /* #090909 */
+    --foreground: 0 0% 100%;       /* #FFFFFF */
+    --card: 0 0% 8%;               /* #141414 */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;            /* #111111 */
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;          /* White filled */
+    --primary-foreground: 0 0% 4%; /* Dark text on white */
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 64%;
+    --muted: 0 0% 7%;
+    --muted-foreground: 240 5% 45%; /* #6B7280 */
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 4%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 25%;
-    --input: 217 33% 25%;
-    --ring: 261 100% 67%;
-    --radius: 0.5rem;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 14%;            /* #242424 */
+    --input: 0 0% 7%;
+    --ring: 0 0% 100%;
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --hover-border: #3F3F46;
+    --secondary-text: #A3A3A3;
+    --muted-text: #6B7280;
+    --card-bg: #141414;
+    --secondary-bg: #111111;
   }
- 
+
   .dark {
-    --background: 224 4% 17%; /* #2B2D31 */
-    --foreground: 210 40% 98%;
-    --card: 222 5% 20%;
-    --card-foreground: 210 40% 98%;
-    --popover: 224 4% 17%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 266 50% 53%; /* #7949C6 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 25%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 261 100% 67%; /* #A259FF */
-    --accent-foreground: 210 40% 98%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 64%;
+    --muted: 0 0% 7%;
+    --muted-foreground: 240 5% 45%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 4%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 25%;
-    --input: 217 33% 25%;
-    --ring: 261 100% 67%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 14%;
+    --input: 0 0% 7%;
+    --ring: 0 0% 100%;
   }
 }
 
+/* ============================================================
+   BASE RESETS
+   ============================================================ */
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
+
   html {
     @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
+
   body {
-    @apply bg-background text-foreground animate-move-background;
-    background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
-    background-size: 2rem 2rem;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
+
+  /* Selection color */
+  ::selection {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090909;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #242424;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+  }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+@layer utilities {
+  /* Satoshi heading font */
+  .font-satoshi {
+    font-family: 'Satoshi', 'Inter', sans-serif;
+  }
+
+  /* Subtle glow effects */
+  .glow-white {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.04), 0 0 80px rgba(255, 255, 255, 0.02);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.08), 0 0 80px rgba(96, 165, 250, 0.04);
+  }
+
+  /* Animated gradient border */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(#141414, #141414) padding-box,
+                linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02), rgba(255,255,255,0.08)) border-box;
+    border: 1px solid transparent;
+  }
+
+  .gradient-border-hover:hover {
+    background: linear-gradient(#141414, #141414) padding-box,
+                linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05), rgba(255,255,255,0.15)) border-box;
+    border: 1px solid transparent;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #A3A3A3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Container max width */
+  .container-wide {
+    @apply max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20;
+  }
+
+  /* Pill/tag styles */
+  .pill {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background: #141414;
+    border: 1px solid #242424;
+    color: #A3A3A3;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .pill:hover {
+    border-color: #3F3F46;
+    color: #ffffff;
+  }
+
+  /* Timeline dot */
+  .timeline-dot {
+    @apply w-2 h-2 rounded-full bg-white/20 border border-white/10;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-dot.active {
+    @apply bg-white border-white/50;
+    box-shadow: 0 0 12px rgba(255,255,255,0.3);
+  }
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Lenis smooth scroll override */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
