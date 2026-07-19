@@ -212,11 +212,9 @@ export default function Research() {
                   Outcome
                 </p>
                   <p className="text-sm text-[#A3A3A3] leading-relaxed">
-                    Submitted to{' '}
-                    <span className="text-white font-medium">Springer ICCIS 2026</span>, presenting a
-                    machine learning-based spectrum sensing framework for Cognitive Radio IoT
-                    (CR-IoT) that improves low-SNR signal detection over traditional energy
-                    detection methods.
+                    Machine learning-based spectrum sensing research using Software Defined Radios
+                    (USRP & RTL-SDR) for Cognitive Radio IoT (CR-IoT), focused on improving
+                    spectrum detection performance in low-SNR environments.
                   </p>
               </div>
             </div>
