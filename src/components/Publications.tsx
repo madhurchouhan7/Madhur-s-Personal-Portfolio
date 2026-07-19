@@ -5,18 +5,30 @@ import { ArrowUpRight, BookOpen, Award } from 'lucide-react';
 
 const publications = [
   {
-    id: 'ieee-iccis-2026',
-    type: 'Conference Paper',
-    status: 'Accepted',
+    id: 'springer-iccis-2026-lung-nodule',
+    type: 'Research Paper',
+    status: 'Submitted',
     year: '2026',
     title:
-      'Machine Learning-based Multi-Label Spectrum Sensing for Cognitive Radio in IoT Using SDR',
-    conference: 'IEEE International Conference on Computing and Information Sciences (ICCIS 2026)',
+      'Lung Nodule Malignancy Classification from CT Scan Images using Radiomics-Deep Learning Fusion',
+    conference: 'Springer International Conference on Computing and Information Sciences (ICCIS 2026)',
+    venue: 'Acropolis Institute of Technology and Research',
+    abstract:
+      'This paper presents a hybrid framework for lung nodule malignancy classification by combining handcrafted radiomics features with deep learning representations extracted from CT scans. Leveraging the LIDC-IDRI dataset and multi-radiologist consensus annotations, the proposed fusion approach improves classification performance while enhancing robustness and clinical interpretability for computer-aided diagnosis.',
+    doi: '#',
+    tags: ['Computer Vision', 'Medical Imaging', 'Deep Learning', 'Radiomics', 'LIDC-IDRI', 'PyTorch'],
+  },
+  {
+    id: 'spectrum-sensing-research',
+    type: 'Ongoing Research',
+    status: 'In Progress',
+    year: '2026',
+    title: 'Spectrum Sensing with Machine Learning',
     venue: 'IIT Indore',
     abstract:
-      'This paper presents a multi-label spectrum sensing framework using software-defined radios (USRP B210 and RTL-SDR) combined with machine learning classifiers. We collect real-world RF datasets using GNU Radio, extract energy and spectral features, and evaluate classification performance under varying SNR conditions for cognitive radio IoT deployments.',
-    doi: 'https://doi.org/10.xxxx/placeholder',
-    tags: ['Machine Learning', 'Spectrum Sensing', 'SDR', 'Cognitive Radio', 'IoT'],
+      'Ongoing research exploring the application of machine learning algorithms for spectrum sensing to optimize frequency band utilization.',
+    doi: '#',
+    tags: ['Machine Learning', 'Spectrum Sensing', 'Cognitive Radio'],
   },
 ];
 
@@ -86,7 +98,9 @@ export default function Publications() {
                   </h3>
 
                   {/* Conference */}
-                  <p className="text-sm text-[#A3A3A3] mb-1">{pub.conference}</p>
+                  {pub.conference && (
+                    <p className="text-sm text-[#A3A3A3] mb-1">{pub.conference}</p>
+                  )}
                   <p className="text-xs text-[#6B7280] font-mono mb-6">{pub.venue}</p>
 
                   {/* Abstract */}
@@ -136,7 +150,7 @@ export default function Publications() {
         <AnimatedSection variant="fadeUp" delay={0.2} className="mt-8">
           <div className="rounded-xl border border-dashed border-[#242424] p-6 text-center">
             <p className="text-sm text-[#6B7280]">
-              More publications in progress — research is ongoing at IIT Indore.
+              More publications in progress.
             </p>
           </div>
         </AnimatedSection>

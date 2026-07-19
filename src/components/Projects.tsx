@@ -28,7 +28,7 @@ const projects: Project[] = [
     description:
       'Multi-label spectrum sensing using USRP & RTL-SDR for Cognitive Radio in IoT. Building robust datasets and evaluating ML models for real-time signal classification.',
     longDescription:
-      'Cognitive Radio (CR) addresses spectrum scarcity by dynamically assigning underutilized frequency bands to secondary users. This research applies machine learning to spectrum sensing — detecting primary user activity in real-time using SDR hardware.\n\nUsing USRP B210 and RTL-SDR hardware with GNU Radio as the signal processing backbone, we captured, processed, and labeled radio frequency signals to build robust multi-label datasets. These datasets trained classification models that outperform traditional energy-detection methods, especially under low SNR conditions.\n\nThis research was published at IEEE ICCIS 2026, demonstrating how ML-based sensing enables smarter spectrum usage in CR-IoT networks.',
+      'Cognitive Radio (CR) addresses spectrum scarcity by dynamically assigning underutilized frequency bands to secondary users. This research applies machine learning to spectrum sensing — detecting primary user activity in real-time using SDR hardware.\n\nUsing USRP B210 and RTL-SDR hardware with GNU Radio as the signal processing backbone, we captured, processed, and labeled radio frequency signals to build robust multi-label datasets. These datasets trained classification models that outperform traditional energy-detection methods, especially under low SNR conditions.\n\nThis ongoing research demonstrates how ML-based sensing enables smarter spectrum usage in CR-IoT networks.',
     tags: ['Python', 'GNU Radio', 'SDR', 'PyTorch', 'USRP', 'RTL-SDR', 'Scikit-learn', 'Signal Processing'],
     category: 'Research',
     link: '#',
@@ -73,7 +73,7 @@ const projects: Project[] = [
     longDescription:
       'Currently architecting the system from the ground up, focusing heavily on robust CI/CD pipelines and scalable infrastructure before scaling the user base.\n\nKey Technical Milestones:\n\nFrontend: Developing a cross-platform mobile application using Flutter, featuring dynamic energy dashboards and appliance management UIs.\n\nBackend: Engineering a RESTful API with Node.js, Express, and MongoDB to handle real-time user data and secure authentication.\n\nDevOps & Architecture: Implemented an enterprise-grade CI/CD pipeline using GitHub Actions to automate linting, security audits, and testing (flutter analyze, npm test). Engineered a fully automated Continuous Deployment (CD) pipeline that safely injects environment secrets and publishes release-ready APKs.\n\nContainerized the backend using highly optimized, multi-stage Docker builds with strict security layers (non-root users, .dockerignore) for seamless deployment across environments.',
     tags: ['Flutter', 'Node.js', 'Express', 'MongoDB', 'GitHub Actions', 'Docker'],
-    category: 'Full Stack',
+    category: 'Full Stack Mobile App',
     link: 'https://wattwise-landing-page.vercel.app/',
     codeLink: 'https://github.com/madhurchouhan7/WattWise-App-MONO-REPO',
     image: '/images/wattwise.png',

@@ -5,9 +5,9 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 const stats = [
-  { value: '10+', label: 'Projects Built' },
-  { value: '2+', label: 'Research Papers' },
-  { value: '1', label: 'IEEE Publication' },
+  { value: '5+', label: 'Projects Built' },
+  { value: '1+', label: 'Research Papers' },
+  { value: '1', label: 'Paper Submitted' },
 ];
 
 const highlights = [
@@ -117,7 +117,7 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-[#A3A3A3] text-base leading-relaxed">
                   <p>
-                    I'm Madhur Chouhan, a B.Tech ECE student at{' '}
+                    I'm <span className="text-white">Madhur Chouhan</span>, a B.Tech ECE student at{' '}
                     <span className="text-white">
                       Acropolis Institute of Technology and Research, Indore
                     </span>
@@ -133,15 +133,7 @@ export default function About() {
                       Machine Learning-based Spectrum Sensing using Software Defined Radios (USRP &
                       RTL-SDR)
                     </span>{' '}
-                    for Cognitive Radio in IoT environments. This research resulted in an IEEE
-                    conference publication.
-                  </p>
-                  <p>
-                    My work sits at the intersection of{' '}
-                    <span className="text-white">Signal Processing</span>,{' '}
-                    <span className="text-white">Deep Learning</span>, and{' '}
-                    <span className="text-white">Generative AI</span> — designing systems that can
-                    sense, understand, and act on complex data.
+                    for Cognitive Radio in IoT environments. This is an ongoing research project exploring the intersection of telecommunications and AI.
                   </p>
                 </div>
               </div>

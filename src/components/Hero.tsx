@@ -104,11 +104,11 @@ export default function Hero() {
               variants={itemVariants}
               className="text-[#A3A3A3] text-base md:text-lg leading-relaxed max-w-xl"
             >
-              <span className="text-white font-medium">Conducted research at IIT Indore</span> on{' '}
+              <span className="text-white font-medium">Conducting ongoing research at IIT Indore</span> on{' '}
               <span className="text-white font-medium">
-                Machine Learning-based Spectrum Sensing using Software Defined Radios (SDR)
+                Machine Learning-based Spectrum Sensing
               </span>
-              , resulting in an IEEE conference publication. Currently building intelligent
+              , and recently submitted a paper on AI-driven medical imaging to an international conference. Currently building intelligent
               applications in Computer Vision and Large Language Models.
             </motion.p>
 

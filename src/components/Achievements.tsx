@@ -13,13 +13,13 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    value: 10,
+    value: 5,
     suffix: '+',
     label: 'Projects',
     description: 'AI/ML systems built end-to-end',
   },
   {
-    value: 2,
+    value: 1,
     suffix: '+',
     label: 'Research Papers',
     description: 'Academic publications in AI & Signal Processing',
@@ -31,7 +31,7 @@ const stats: Stat[] = [
     description: 'IIT Indore — Spectrum Sensing & SDR',
   },
   {
-    value: 500,
+    value: 50,
     suffix: '+',
     label: 'LeetCode Problems',
     description: 'Algorithmic problem solving',
@@ -102,7 +102,7 @@ export default function Achievements() {
             — By The Numbers
           </p>
           <h2 className="font-satoshi text-4xl md:text-5xl font-bold text-white">
-            Impact &amp; Achievements
+            Impact &amp; Highlights
           </h2>
         </AnimatedSection>
 

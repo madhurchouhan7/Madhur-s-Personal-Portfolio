@@ -211,11 +211,13 @@ export default function Research() {
                 <p className="text-[10px] text-blue-400 font-mono uppercase tracking-wider mb-2">
                   Outcome
                 </p>
-                <p className="text-sm text-[#A3A3A3] leading-relaxed">
-                  Published at{' '}
-                  <span className="text-white font-medium">IEEE ICCIS 2026</span> — demonstrating
-                  ML-based sensing outperforms energy detection at low SNR in CR-IoT environments.
-                </p>
+                  <p className="text-sm text-[#A3A3A3] leading-relaxed">
+                    Submitted to{' '}
+                    <span className="text-white font-medium">Springer ICCIS 2026</span>, presenting a
+                    machine learning-based spectrum sensing framework for Cognitive Radio IoT
+                    (CR-IoT) that improves low-SNR signal detection over traditional energy
+                    detection methods.
+                  </p>
               </div>
             </div>
           </AnimatedSection>
